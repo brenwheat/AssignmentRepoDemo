@@ -27,6 +27,8 @@ def main():
     db.add_user("test@example.com", "password123")
 
     user = User(db)
+    user.create_login_ui()
+    
     tracker = HealthTracker(db)
 
     # --- TC01: Successful Login ---
