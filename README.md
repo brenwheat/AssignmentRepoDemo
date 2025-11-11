@@ -1,4 +1,4 @@
-My groupmembers are:
+Our groupmembers are:
 - Brenna Wheaton
 - Aubrie Zalewski
 - Abbey Breehey
