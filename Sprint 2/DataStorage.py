@@ -65,4 +65,16 @@ class DataStorage:
         for d, v in moods:
             # Include if the day is between start and today (inclusive).
             if start_ordinal <= d.toordinal() <= today.toordinal():
-                window.appen
+                window.append((d, v))
+        return window
+
+    def get_streak(self, email):
+        return self.users[email]["streak"]
+
+    def update_streak(self, email):
+        """Increase streak unless limit (9999) reached"""
+        user = self.users[email]
+        if user["streak"] >= 9999:
+            return "Error: streak limit reached"
+        user["streak"] += 1
+        return user["streak"]
